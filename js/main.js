@@ -103,7 +103,7 @@
     * ------------------------------------------------------ */
     const ssFinalCountdown = function() {
 
-        const finalDate = '2022/04/07';
+        const finalDate = '2022/01/01';
 
         $('.counter').countdown(finalDate)
         .on('update.countdown finish.countdown', function(event) {
@@ -202,6 +202,8 @@
             url: cfg.mailChimpURL
         });
 
+        console.log('#', cfg.mailChimpURL)
+
         // Mailchimp translation
         //
         //  Defaults:
@@ -214,7 +216,6 @@
         //  5: 'This email address looks fake or invalid. Please enter a real email address'
 
         $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
             0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
             1: '<i class="fas fa-exclamation-triangle"></i> You must enter a valid e-mail address.',
             2: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
